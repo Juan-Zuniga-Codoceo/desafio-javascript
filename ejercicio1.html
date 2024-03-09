@@ -47,37 +47,37 @@
         </div>
     </div>
     <script>
-    document.getElementById('formulario').addEventListener('submit', function(event) {
-    event.preventDefault();
+        document.getElementById('formulario').addEventListener('submit', function (event) {
+            event.preventDefault();
 
-    var nombre = document.getElementById('nombre');
-    var asunto = document.getElementById('asunto');
-    var mensaje = document.getElementById('mensaje');
+            var nombre = document.getElementById('nombre');
+            var asunto = document.getElementById('asunto');
+            var mensaje = document.getElementById('mensaje');
 
-    var regex = /^[A-Za-z\s]+$/;
+            var regex = /^[A-Za-z\s]+$/;
 
-    if (!regex.test(nombre.value)) {
-        document.querySelector('.errorNombre').textContent = 'El nombre es requerido.';
-    } else {
-        document.querySelector('.errorNombre').textContent = '';
-    }
+            if (!regex.test(nombre.value)) {
+                document.querySelector('.errorNombre').textContent = 'El nombre es requerido.';
+            } else {
+                document.querySelector('.errorNombre').textContent = '';
+            }
 
-    if (!regex.test(asunto.value)) {
-        document.querySelector('.errorAsunto').textContent = 'El asunto es requerido.';
-    } else {
-        document.querySelector('.errorAsunto').textContent = '';
-    }
+            if (!regex.test(asunto.value)) {
+                document.querySelector('.errorAsunto').textContent = 'El asunto es requerido.';
+            } else {
+                document.querySelector('.errorAsunto').textContent = '';
+            }
 
-    if (!regex.test(mensaje.value)) {
-        document.querySelector('.errorMensaje').textContent = 'El mensaje es requerido.';
-    } else {
-        document.querySelector('.errorMensaje').textContent = '';
-    }
+            if (!regex.test(mensaje.value)) {
+                document.querySelector('.errorMensaje').textContent = 'El mensaje es requerido.';
+            } else {
+                document.querySelector('.errorMensaje').textContent = '';
+            }
 
-    if (regex.test(nombre.value) && regex.test(asunto.value) && regex.test(mensaje.value)) {
-        document.querySelector('.resultado').textContent = 'Mensaje enviado con éxito !!!';
-    }
-});
+            if (regex.test(nombre.value) && regex.test(asunto.value) && regex.test(mensaje.value)) {
+                document.querySelector('.resultado').textContent = 'Mensaje enviado con éxito !!!';
+            }
+        });
 
     </script>
 </body>
